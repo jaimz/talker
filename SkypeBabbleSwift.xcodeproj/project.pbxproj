@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72B1E4491C04C55200EFDF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E4481C04C55200EFDF85 /* AppDelegate.swift */; };
+		72B1E44B1C04C55200EFDF85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E44A1C04C55200EFDF85 /* ViewController.swift */; };
+		72B1E44E1C04C55200EFDF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1E44C1C04C55200EFDF85 /* Main.storyboard */; };
+		72B1E4501C04C55200EFDF85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B1E44F1C04C55200EFDF85 /* Assets.xcassets */; };
+		72B1E4531C04C55200EFDF85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1E4511C04C55200EFDF85 /* LaunchScreen.storyboard */; };
+		72B1E45E1C04C55200EFDF85 /* SkypeBabbleSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E45D1C04C55200EFDF85 /* SkypeBabbleSwiftTests.swift */; };
+		72B1E4691C04C55200EFDF85 /* SkypeBabbleSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E4681C04C55200EFDF85 /* SkypeBabbleSwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		72B1E45A1C04C55200EFDF85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B1E43D1C04C55200EFDF85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B1E4441C04C55200EFDF85;
+			remoteInfo = SkypeBabbleSwift;
+		};
+		72B1E4651C04C55200EFDF85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72B1E43D1C04C55200EFDF85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72B1E4441C04C55200EFDF85;
+			remoteInfo = SkypeBabbleSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		72B1E4451C04C55200EFDF85 /* SkypeBabbleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkypeBabbleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B1E4481C04C55200EFDF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		72B1E44A1C04C55200EFDF85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72B1E44D1C04C55200EFDF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		72B1E44F1C04C55200EFDF85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72B1E4521C04C55200EFDF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		72B1E4541C04C55200EFDF85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B1E4591C04C55200EFDF85 /* SkypeBabbleSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkypeBabbleSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B1E45D1C04C55200EFDF85 /* SkypeBabbleSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkypeBabbleSwiftTests.swift; sourceTree = "<group>"; };
+		72B1E45F1C04C55200EFDF85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72B1E4641C04C55200EFDF85 /* SkypeBabbleSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkypeBabbleSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B1E4681C04C55200EFDF85 /* SkypeBabbleSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkypeBabbleSwiftUITests.swift; sourceTree = "<group>"; };
+		72B1E46A1C04C55200EFDF85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72B1E4421C04C55200EFDF85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B1E4561C04C55200EFDF85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B1E4611C04C55200EFDF85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		72B1E43C1C04C55200EFDF85 = {
+			isa = PBXGroup;
+			children = (
+				72B1E4471C04C55200EFDF85 /* SkypeBabbleSwift */,
+				72B1E45C1C04C55200EFDF85 /* SkypeBabbleSwiftTests */,
+				72B1E4671C04C55200EFDF85 /* SkypeBabbleSwiftUITests */,
+				72B1E4461C04C55200EFDF85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72B1E4461C04C55200EFDF85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72B1E4451C04C55200EFDF85 /* SkypeBabbleSwift.app */,
+				72B1E4591C04C55200EFDF85 /* SkypeBabbleSwiftTests.xctest */,
+				72B1E4641C04C55200EFDF85 /* SkypeBabbleSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72B1E4471C04C55200EFDF85 /* SkypeBabbleSwift */ = {
+			isa = PBXGroup;
+			children = (
+				72B1E4481C04C55200EFDF85 /* AppDelegate.swift */,
+				72B1E44A1C04C55200EFDF85 /* ViewController.swift */,
+				72B1E44C1C04C55200EFDF85 /* Main.storyboard */,
+				72B1E44F1C04C55200EFDF85 /* Assets.xcassets */,
+				72B1E4511C04C55200EFDF85 /* LaunchScreen.storyboard */,
+				72B1E4541C04C55200EFDF85 /* Info.plist */,
+			);
+			path = SkypeBabbleSwift;
+			sourceTree = "<group>";
+		};
+		72B1E45C1C04C55200EFDF85 /* SkypeBabbleSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				72B1E45D1C04C55200EFDF85 /* SkypeBabbleSwiftTests.swift */,
+				72B1E45F1C04C55200EFDF85 /* Info.plist */,
+			);
+			path = SkypeBabbleSwiftTests;
+			sourceTree = "<group>";
+		};
+		72B1E4671C04C55200EFDF85 /* SkypeBabbleSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				72B1E4681C04C55200EFDF85 /* SkypeBabbleSwiftUITests.swift */,
+				72B1E46A1C04C55200EFDF85 /* Info.plist */,
+			);
+			path = SkypeBabbleSwiftUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72B1E4441C04C55200EFDF85 /* SkypeBabbleSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B1E46D1C04C55200EFDF85 /* Build configuration list for PBXNativeTarget "SkypeBabbleSwift" */;
+			buildPhases = (
+				72B1E4411C04C55200EFDF85 /* Sources */,
+				72B1E4421C04C55200EFDF85 /* Frameworks */,
+				72B1E4431C04C55200EFDF85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkypeBabbleSwift;
+			productName = SkypeBabbleSwift;
+			productReference = 72B1E4451C04C55200EFDF85 /* SkypeBabbleSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		72B1E4581C04C55200EFDF85 /* SkypeBabbleSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B1E4701C04C55200EFDF85 /* Build configuration list for PBXNativeTarget "SkypeBabbleSwiftTests" */;
+			buildPhases = (
+				72B1E4551C04C55200EFDF85 /* Sources */,
+				72B1E4561C04C55200EFDF85 /* Frameworks */,
+				72B1E4571C04C55200EFDF85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72B1E45B1C04C55200EFDF85 /* PBXTargetDependency */,
+			);
+			name = SkypeBabbleSwiftTests;
+			productName = SkypeBabbleSwiftTests;
+			productReference = 72B1E4591C04C55200EFDF85 /* SkypeBabbleSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		72B1E4631C04C55200EFDF85 /* SkypeBabbleSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B1E4731C04C55200EFDF85 /* Build configuration list for PBXNativeTarget "SkypeBabbleSwiftUITests" */;
+			buildPhases = (
+				72B1E4601C04C55200EFDF85 /* Sources */,
+				72B1E4611C04C55200EFDF85 /* Frameworks */,
+				72B1E4621C04C55200EFDF85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				72B1E4661C04C55200EFDF85 /* PBXTargetDependency */,
+			);
+			name = SkypeBabbleSwiftUITests;
+			productName = SkypeBabbleSwiftUITests;
+			productReference = 72B1E4641C04C55200EFDF85 /* SkypeBabbleSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72B1E43D1C04C55200EFDF85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "James O'Brien";
+				TargetAttributes = {
+					72B1E4441C04C55200EFDF85 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					72B1E4581C04C55200EFDF85 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 72B1E4441C04C55200EFDF85;
+					};
+					72B1E4631C04C55200EFDF85 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 72B1E4441C04C55200EFDF85;
+					};
+				};
+			};
+			buildConfigurationList = 72B1E4401C04C55200EFDF85 /* Build configuration list for PBXProject "SkypeBabbleSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 72B1E43C1C04C55200EFDF85;
+			productRefGroup = 72B1E4461C04C55200EFDF85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72B1E4441C04C55200EFDF85 /* SkypeBabbleSwift */,
+				72B1E4581C04C55200EFDF85 /* SkypeBabbleSwiftTests */,
+				72B1E4631C04C55200EFDF85 /* SkypeBabbleSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72B1E4431C04C55200EFDF85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B1E4531C04C55200EFDF85 /* LaunchScreen.storyboard in Resources */,
+				72B1E4501C04C55200EFDF85 /* Assets.xcassets in Resources */,
+				72B1E44E1C04C55200EFDF85 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B1E4571C04C55200EFDF85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B1E4621C04C55200EFDF85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72B1E4411C04C55200EFDF85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B1E44B1C04C55200EFDF85 /* ViewController.swift in Sources */,
+				72B1E4491C04C55200EFDF85 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B1E4551C04C55200EFDF85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B1E45E1C04C55200EFDF85 /* SkypeBabbleSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72B1E4601C04C55200EFDF85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B1E4691C04C55200EFDF85 /* SkypeBabbleSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		72B1E45B1C04C55200EFDF85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72B1E4441C04C55200EFDF85 /* SkypeBabbleSwift */;
+			targetProxy = 72B1E45A1C04C55200EFDF85 /* PBXContainerItemProxy */;
+		};
+		72B1E4661C04C55200EFDF85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 72B1E4441C04C55200EFDF85 /* SkypeBabbleSwift */;
+			targetProxy = 72B1E4651C04C55200EFDF85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		72B1E44C1C04C55200EFDF85 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72B1E44D1C04C55200EFDF85 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		72B1E4511C04C55200EFDF85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72B1E4521C04C55200EFDF85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72B1E46B1C04C55200EFDF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72B1E46C1C04C55200EFDF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72B1E46E1C04C55200EFDF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SkypeBabbleSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skype.SkypeBabbleSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		72B1E46F1C04C55200EFDF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SkypeBabbleSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skype.SkypeBabbleSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		72B1E4711C04C55200EFDF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SkypeBabbleSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skype.SkypeBabbleSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkypeBabbleSwift.app/SkypeBabbleSwift";
+			};
+			name = Debug;
+		};
+		72B1E4721C04C55200EFDF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SkypeBabbleSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skype.SkypeBabbleSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkypeBabbleSwift.app/SkypeBabbleSwift";
+			};
+			name = Release;
+		};
+		72B1E4741C04C55200EFDF85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SkypeBabbleSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skype.SkypeBabbleSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SkypeBabbleSwift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		72B1E4751C04C55200EFDF85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SkypeBabbleSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.skype.SkypeBabbleSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SkypeBabbleSwift;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72B1E4401C04C55200EFDF85 /* Build configuration list for PBXProject "SkypeBabbleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B1E46B1C04C55200EFDF85 /* Debug */,
+				72B1E46C1C04C55200EFDF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72B1E46D1C04C55200EFDF85 /* Build configuration list for PBXNativeTarget "SkypeBabbleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B1E46E1C04C55200EFDF85 /* Debug */,
+				72B1E46F1C04C55200EFDF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		72B1E4701C04C55200EFDF85 /* Build configuration list for PBXNativeTarget "SkypeBabbleSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B1E4711C04C55200EFDF85 /* Debug */,
+				72B1E4721C04C55200EFDF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		72B1E4731C04C55200EFDF85 /* Build configuration list for PBXNativeTarget "SkypeBabbleSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B1E4741C04C55200EFDF85 /* Debug */,
+				72B1E4751C04C55200EFDF85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72B1E43D1C04C55200EFDF85 /* Project object */;
+}
