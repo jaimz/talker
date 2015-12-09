@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class LeafAvatar: UIView {
 
     private let _leafPath = UIBezierPath();
@@ -26,8 +27,8 @@ class LeafAvatar: UIView {
     }
     
     init(image: UIImage) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0));
         self.avatarImage = image;
+        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0));
     }
     
     
@@ -35,6 +36,10 @@ class LeafAvatar: UIView {
         didSet {
             _imageLayer.contents = avatarImage.CGImage;
         }
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        self.avatarImage = GMBStyleKit.imageOfFace;
     }
     
     
@@ -62,6 +67,9 @@ class LeafAvatar: UIView {
         _borderLayer.strokeColor = UIColor.whiteColor().CGColor;
         _borderLayer.fillColor = UIColor.clearColor().CGColor;
         
+        _imageLayer.contents = avatarImage.CGImage;
+        _imageLayer.backgroundColor = UIColor.whiteColor().CGColor;
+        _imageLayer.contentsGravity = kCAGravityResizeAspectFill;
         _imageLayer.mask = mask;
         
         self.layer.addSublayer(_imageLayer);

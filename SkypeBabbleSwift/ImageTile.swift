@@ -10,14 +10,16 @@ import UIKit
 
 let kDefaultCornerRadius = 4.0;
 
+
+@IBDesignable
 class ImageTile: UIView {
 
-    var image : UIImage? = .None;
-    var cornerRadius : CGFloat = 4.0;
+    private let _imageLayer = CALayer();
 
+    
     init(image: UIImage) {
+        self.image = image;
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0));
-        self.image = .Some(image);
     }
     
     override init(frame: CGRect) {
@@ -30,24 +32,42 @@ class ImageTile: UIView {
         self.setup();
     }
     
+    @IBInspectable
+    var cornerRadius : CGFloat = 4.0 {
+        didSet {
+            self._imageLayer.cornerRadius = cornerRadius;
+            self.layer.cornerRadius = cornerRadius;
+        }
+    }
+    
+    var image : UIImage = GMBStyleKit.imageOfFace {
+        didSet {
+            _imageLayer.contents = image.CGImage;
+        }
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        image = GMBStyleKit.imageOfFace;
+    }
     
     func setup() {
-        let imageLayer = CALayer();
-        imageLayer.cornerRadius = self.cornerRadius;
-        imageLayer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.3).CGColor;
-        imageLayer.borderWidth = 1.0
-        imageLayer.masksToBounds = true;
-        imageLayer.frame = CGRect(x: 0,y: 0,width: 20,height: 20);
-        imageLayer.backgroundColor = UIColor.greenColor().CGColor;
-        
-        
-        self.layer.shadowColor = UIColor.blackColor().CGColor;
-        self.layer.shadowOffset = CGSizeMake(0.0, 1.0);
-        self.layer.shadowRadius = 4.0;
+        _imageLayer.cornerRadius = self.cornerRadius;
+        _imageLayer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.3).CGColor;
+        _imageLayer.borderWidth = 1.0
+        _imageLayer.masksToBounds = true;
+        _imageLayer.frame = CGRect(x: 0,y: 0,width: 20,height: 20);
+        _imageLayer.backgroundColor = UIColor.whiteColor().CGColor;
+
+                
         self.layer.cornerRadius = self.cornerRadius;
-        self.layer.backgroundColor = UIColor.blueColor().CGColor;
+        DrawingUtils.giveLogoShadow(self.layer);
         
-        self.layer.addSublayer(imageLayer);
+        self.layer.addSublayer(_imageLayer);
+    }
+    
+    override func layoutSublayersOfLayer(layer: CALayer) {
+        let frame = CGRect(origin: CGPoint(x: 0, y: 0), size: layer.frame.size);
+        _imageLayer.frame = frame;
     }
     
     /*

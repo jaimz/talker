@@ -1,21 +1,108 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupsViewController" customModule="SkypeBabbleSwift" customModuleProvider="target">
             <connections>
+                <outlet property="createDMButton" destination="QgE-Cq-Tef" id="giP-LT-aV1"/>
+                <outlet property="createGroupButton" destination="TxG-A6-cSj" id="kpV-uE-zny"/>
+                <outlet property="groupsCollectionView" destination="hmn-FQ-Im1" id="Cbq-9f-n6x"/>
+                <outlet property="groupsLabel" destination="Xqn-XL-74w" id="cg9-xs-Fqx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="GroupsView" customModule="SkypeBabbleSwift" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Lh-cj-eIs" customClass="LeafAvatar" customModule="SkypeBabbleSwift" customModuleProvider="target">
+                    <rect key="frame" x="22" y="25" width="50" height="50"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="XwZ-iI-1WU"/>
+                        <constraint firstAttribute="height" constant="50" id="fIf-9I-VUf"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P9j-TJ-KcZ">
+                    <rect key="frame" x="492" y="23" width="100" height="50"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Ajl-Bm-usL"/>
+                        <constraint firstAttribute="height" constant="50" id="ya8-79-Zqu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You do not belong to any groups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqn-XL-74w">
+                    <rect key="frame" x="44" y="106" width="548" height="17"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.49593211206896554" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0y5-bH-90A">
+                    <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgE-Cq-Tef">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                            <animations/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxG-A6-cSj">
+                            <rect key="frame" x="300" y="0.0" width="300" height="50"/>
+                            <animations/>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="QgE-Cq-Tef" firstAttribute="leading" secondItem="0y5-bH-90A" secondAttribute="leading" id="0cB-Tk-EHx"/>
+                        <constraint firstAttribute="bottom" secondItem="QgE-Cq-Tef" secondAttribute="bottom" id="2bz-BX-j8T"/>
+                        <constraint firstAttribute="bottom" secondItem="TxG-A6-cSj" secondAttribute="bottom" id="4xm-5a-h5D"/>
+                        <constraint firstItem="TxG-A6-cSj" firstAttribute="top" secondItem="0y5-bH-90A" secondAttribute="top" id="Lfe-3W-yby"/>
+                        <constraint firstItem="QgE-Cq-Tef" firstAttribute="top" secondItem="0y5-bH-90A" secondAttribute="top" id="MtO-fa-gmh"/>
+                        <constraint firstItem="QgE-Cq-Tef" firstAttribute="width" secondItem="0y5-bH-90A" secondAttribute="width" multiplier="0.5" id="fml-vq-KJC"/>
+                        <constraint firstAttribute="trailing" secondItem="TxG-A6-cSj" secondAttribute="trailing" id="h4H-VX-Tc5"/>
+                        <constraint firstAttribute="height" constant="50" id="ov8-LE-FNO"/>
+                        <constraint firstItem="TxG-A6-cSj" firstAttribute="width" secondItem="0y5-bH-90A" secondAttribute="width" multiplier="0.5" id="uOT-5b-vh4"/>
+                    </constraints>
+                </view>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hmn-FQ-Im1">
+                    <rect key="frame" x="0.0" y="131" width="600" height="411"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <collectionViewLayout key="collectionViewLayout" id="DUE-rb-P32" customClass="GroupCollectionFlowLayout" customModule="SkypeBabbleSwift" customModuleProvider="target"/>
+                </collectionView>
+            </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0y5-bH-90A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="170-iP-m32"/>
+                <constraint firstItem="hmn-FQ-Im1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6e9-f5-5UG"/>
+                <constraint firstItem="P9j-TJ-KcZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="AfF-lQ-auO"/>
+                <constraint firstItem="0y5-bH-90A" firstAttribute="top" secondItem="hmn-FQ-Im1" secondAttribute="bottom" constant="8" id="Giz-mh-bEd"/>
+                <constraint firstAttribute="trailing" secondItem="0y5-bH-90A" secondAttribute="trailing" id="HEy-hn-IF3"/>
+                <constraint firstItem="3Lh-cj-eIs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22.5" id="RcQ-Ls-9bS">
+                    <variation key="heightClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="P9j-TJ-KcZ" secondAttribute="trailing" constant="8" id="UwG-dn-fpw"/>
+                <constraint firstItem="3Lh-cj-eIs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25.5" id="ZIJ-Xi-Qc8">
+                    <variation key="heightClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="Xqn-XL-74w" firstAttribute="top" secondItem="3Lh-cj-eIs" secondAttribute="bottom" constant="31" id="bSg-xr-YjU"/>
+                <constraint firstAttribute="bottom" secondItem="0y5-bH-90A" secondAttribute="bottom" id="fXz-y3-THe"/>
+                <constraint firstAttribute="trailing" secondItem="Xqn-XL-74w" secondAttribute="trailing" constant="8" id="gvq-8N-Q7a"/>
+                <constraint firstItem="Xqn-XL-74w" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="oda-h4-g7A"/>
+                <constraint firstAttribute="trailing" secondItem="hmn-FQ-Im1" secondAttribute="trailing" id="q8b-5b-bn7"/>
+                <constraint firstItem="hmn-FQ-Im1" firstAttribute="top" secondItem="Xqn-XL-74w" secondAttribute="bottom" constant="8" id="uNm-mu-diO"/>
+            </constraints>
         </view>
+        <customObject id="fwy-Yu-R37" customClass="GMBStyleKit" customModule="SkypeBabbleSwift" customModuleProvider="target">
+            <connections>
+                <outletCollection property="logoPurpleOnWhiteSmallTargets" destination="P9j-TJ-KcZ" collectionClass="NSMutableArray" id="RoE-Jr-uMD"/>
+            </connections>
+        </customObject>
     </objects>
 </document>

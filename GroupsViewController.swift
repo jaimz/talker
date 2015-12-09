@@ -9,8 +9,19 @@
 import UIKit
 import SwiftyJSON
 
-class GroupsViewController: UIViewController {
-
+class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    private let cellReuseId = "groupCell";
+    
+    @IBOutlet var groupsLabel: UILabel!
+    @IBOutlet var createDMButton: UIButton!
+    
+    @IBOutlet var createGroupButton: UIButton!
+    
+    @IBOutlet var groupsCollectionView: UICollectionView!
+    
+    // TODO(james): should be in a separate data source class
+    private var groupsList : [JSON]? = .None;
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
@@ -20,6 +31,7 @@ class GroupsViewController: UIViewController {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
+
         setup();
     }
     
@@ -28,13 +40,24 @@ class GroupsViewController: UIViewController {
         ServiceManager.sharedInstance.groupMe.notifications.addObserver(self, selector: "gotGroupMeNotification:", name: .None, object: .None);
     }
     
-    override func loadView() {
-        self.view = GroupsView();
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.createDMButton.setImage(GMBStyleKit.imageOfSingleBubble, forState: UIControlState.Normal)
+        self.createGroupButton.setImage(GMBStyleKit.imageOfDualBubble, forState: UIControlState.Normal)
+        
+        let nib = UINib(nibName: "GroupCollectionViewCell", bundle: .None);
+        
+        
+
+        self.groupsCollectionView.registerNib(nib, forCellWithReuseIdentifier: cellReuseId);
+        
+        self.groupsCollectionView.delegate = self;
+        self.groupsCollectionView.dataSource = self;
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,13 +99,9 @@ class GroupsViewController: UIViewController {
     private func gotGroups(groups: JSON?) {
         switch (groups) {
         case .Some(let groups):
-            if let groupList = groups.array {
-                for group in groupList {
-                    if let groupInfo = group.dictionary {
-                        printGroup(groupInfo);
-                    }
-                }
-            }
+            self.groupsList = groups.array;
+            self.groupsCollectionView.reloadData();
+            
             break;
         case .None:
             NSLog("Could not get groups!");
@@ -98,15 +117,34 @@ class GroupsViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: UICollectionViewDataSource
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1;
     }
-    */
-
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (section == 0) {
+            if let groups = groupsList {
+                return groups.count;
+            }
+        }
+        
+        return 0;
+    }
+    
+    
+    // Mark: UICollectionViewDelegate
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = self.groupsCollectionView.dequeueReusableCellWithReuseIdentifier(cellReuseId, forIndexPath: indexPath);
+        
+        if let groupCell = cell as? GroupCollectionViewCell {
+            if let groups = groupsList {
+                let groupDesc = groups[indexPath.row];
+                groupCell.groupName = groupDesc["name"].string;
+                groupCell.groupDescription = groupDesc["description"].string;
+            }
+        }
+        
+        return cell;
+    }
 }

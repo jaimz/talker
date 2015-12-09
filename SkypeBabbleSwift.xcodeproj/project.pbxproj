@@ -27,6 +27,10 @@
 		72D411B41C12281B0064BDE4 /* GroupsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D411B21C12281B0064BDE4 /* GroupsViewController.xib */; };
 		72D411B61C130CAC0064BDE4 /* GMStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D411B51C130CAC0064BDE4 /* GMStateViewController.swift */; };
 		72D411B81C130D520064BDE4 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D411B71C130D520064BDE4 /* ServiceManager.swift */; };
+		72D662231C18B15400399F15 /* GroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D662211C18B15400399F15 /* GroupCollectionViewCell.swift */; };
+		72D662241C18B15400399F15 /* GroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D662221C18B15400399F15 /* GroupCollectionViewCell.xib */; };
+		72D662261C18BBEB00399F15 /* DrawingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D662251C18BBEB00399F15 /* DrawingUtils.swift */; };
+		72D6622C1C18DDC600399F15 /* GroupCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D6622B1C18DDC600399F15 /* GroupCollectionFlowLayout.swift */; };
 		72D95AC81C075F13006FFCA6 /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D95AC71C075F13006FFCA6 /* AvatarButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +78,10 @@
 		72D411B21C12281B0064BDE4 /* GroupsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GroupsViewController.xib; path = ../GroupsViewController.xib; sourceTree = "<group>"; };
 		72D411B51C130CAC0064BDE4 /* GMStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMStateViewController.swift; sourceTree = "<group>"; };
 		72D411B71C130D520064BDE4 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		72D662211C18B15400399F15 /* GroupCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		72D662221C18B15400399F15 /* GroupCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCollectionViewCell.xib; sourceTree = "<group>"; };
+		72D662251C18BBEB00399F15 /* DrawingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingUtils.swift; sourceTree = "<group>"; };
+		72D6622B1C18DDC600399F15 /* GroupCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		72D95AC71C075F13006FFCA6 /* AvatarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,10 +176,14 @@
 				1A4A09831C18605700418CFB /* GMBStyleKit.swift */,
 				72D411B11C12281B0064BDE4 /* GroupsViewController.swift */,
 				72D411B21C12281B0064BDE4 /* GroupsViewController.xib */,
+				72D6622B1C18DDC600399F15 /* GroupCollectionFlowLayout.swift */,
 				72B1E4771C04C5B600EFDF85 /* ImageTile.swift */,
 				72D95AC71C075F13006FFCA6 /* AvatarButton.swift */,
 				1A4A09811C185DF400418CFB /* LeafAvatar.swift */,
 				1A4B23901C18710400FABD49 /* GroupsView.swift */,
+				72D662211C18B15400399F15 /* GroupCollectionViewCell.swift */,
+				72D662221C18B15400399F15 /* GroupCollectionViewCell.xib */,
+				72D662251C18BBEB00399F15 /* DrawingUtils.swift */,
 			);
 			name = "Bespoke Views";
 			sourceTree = "<group>";
@@ -300,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D411B41C12281B0064BDE4 /* GroupsViewController.xib in Resources */,
+				72D662241C18B15400399F15 /* GroupCollectionViewCell.xib in Resources */,
 				72B1E4531C04C55200EFDF85 /* LaunchScreen.storyboard in Resources */,
 				72B1E4501C04C55200EFDF85 /* Assets.xcassets in Resources */,
 				72B1E44E1C04C55200EFDF85 /* Main.storyboard in Resources */,
@@ -353,9 +366,12 @@
 				72D4119B1C0CC28D0064BDE4 /* AuthenticationViewController.swift in Sources */,
 				1A4B23911C18710400FABD49 /* GroupsView.swift in Sources */,
 				72B1E4491C04C55200EFDF85 /* AppDelegate.swift in Sources */,
+				72D6622C1C18DDC600399F15 /* GroupCollectionFlowLayout.swift in Sources */,
+				72D662261C18BBEB00399F15 /* DrawingUtils.swift in Sources */,
 				72D411A71C0F39F10064BDE4 /* GroupMeAPI.swift in Sources */,
 				72D411B61C130CAC0064BDE4 /* GMStateViewController.swift in Sources */,
 				72D411B81C130D520064BDE4 /* ServiceManager.swift in Sources */,
+				72D662231C18B15400399F15 /* GroupCollectionViewCell.swift in Sources */,
 				1A4A09841C18605700418CFB /* GMBStyleKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

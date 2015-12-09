@@ -15,8 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
-    
-    private let stateNavigator = GMStateViewController(rootViewController: GroupsViewController());
+    private let stateNavigator = GMStateViewController(rootViewController: GroupsViewController(nibName: "GroupsViewController", bundle: .None));
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

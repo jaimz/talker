@@ -8,16 +8,16 @@
 
 import UIKit
 
+@IBDesignable
 class GroupsView: UIView {
 
 
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        let appFrame = UIScreen.mainScreen().bounds;
         let ctx = UIGraphicsGetCurrentContext();
         CGContextClipToRect(ctx, rect);
-        GMBStyleKit.drawGroupsScreenBG(screenWidth: appFrame.width, screenHeight: appFrame.height)
+        GMBStyleKit.drawGroupsScreenBG(screenWidth: self.frame.width, screenHeight: self.frame.height)
     }
 
 }
