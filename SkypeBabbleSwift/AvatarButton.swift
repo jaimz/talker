@@ -25,10 +25,11 @@ class AvatarButton: UIButton {
     
     func setup() {
         self.avatarImageLayer.contents = avatarImage;
-        borderLayer.borderColor = SkypeStyleKit.white.CGColor;
+        // TODO(james): Put a "white" color in the stylekit
+        borderLayer.borderColor = UIColor.whiteColor().CGColor;
         borderLayer.borderWidth = 2.0;
         
-        let logoShadow = SkypeStyleKit.logoShadow;
+        let logoShadow = GMBStyleKit.logoShadow;
         self.borderLayer.shadowColor = logoShadow.shadowColor?.CGColor;
         self.borderLayer.shadowOffset = logoShadow.shadowOffset;
         self.borderLayer.shadowRadius = logoShadow.shadowBlurRadius;
@@ -41,7 +42,7 @@ class AvatarButton: UIButton {
         self.borderLayer.frame = self.frame;
         self.borderLayer.cornerRadius = self.frame.size.width / 2.0;
         
-        self.layer.backgroundColor = SkypeStyleKit.avatarBackground.CGColor;
+        self.layer.backgroundColor = UIColor.whiteColor().CGColor;
 
         self.layer.addSublayer(self.avatarImageLayer);
         self.layer.addSublayer(self.borderLayer);
@@ -49,7 +50,7 @@ class AvatarButton: UIButton {
         self.addTarget(self, action: "bounceScale", forControlEvents: [ UIControlEvents.TouchDown, UIControlEvents.TouchDragEnter ]);
     }
     
-    var avatarImage : UIImage = SkypeStyleKit.imageOfFace {
+    var avatarImage : UIImage = GMBStyleKit.imageOfFace {
         didSet {
             self.avatarImageLayer.contents = self.avatarImage;
         }

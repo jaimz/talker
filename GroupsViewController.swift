@@ -28,6 +28,10 @@ class GroupsViewController: UIViewController {
         ServiceManager.sharedInstance.groupMe.notifications.addObserver(self, selector: "gotGroupMeNotification:", name: .None, object: .None);
     }
     
+    override func loadView() {
+        self.view = GroupsView();
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

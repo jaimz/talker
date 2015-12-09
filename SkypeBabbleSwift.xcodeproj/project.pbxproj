@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A4A09821C185DF400418CFB /* LeafAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A09811C185DF400418CFB /* LeafAvatar.swift */; };
+		1A4A09841C18605700418CFB /* GMBStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A09831C18605700418CFB /* GMBStyleKit.swift */; };
+		1A4B23911C18710400FABD49 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B23901C18710400FABD49 /* GroupsView.swift */; };
 		72B1E4491C04C55200EFDF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E4481C04C55200EFDF85 /* AppDelegate.swift */; };
 		72B1E44B1C04C55200EFDF85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E44A1C04C55200EFDF85 /* ViewController.swift */; };
 		72B1E44E1C04C55200EFDF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B1E44C1C04C55200EFDF85 /* Main.storyboard */; };
@@ -25,7 +28,6 @@
 		72D411B61C130CAC0064BDE4 /* GMStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D411B51C130CAC0064BDE4 /* GMStateViewController.swift */; };
 		72D411B81C130D520064BDE4 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D411B71C130D520064BDE4 /* ServiceManager.swift */; };
 		72D95AC81C075F13006FFCA6 /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D95AC71C075F13006FFCA6 /* AvatarButton.swift */; };
-		72D95ACA1C07677E006FFCA6 /* SkypeStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D95AC91C07677E006FFCA6 /* SkypeStyleKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A4A09811C185DF400418CFB /* LeafAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeafAvatar.swift; sourceTree = "<group>"; };
+		1A4A09831C18605700418CFB /* GMBStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMBStyleKit.swift; sourceTree = "<group>"; };
+		1A4B23901C18710400FABD49 /* GroupsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		72B1E4451C04C55200EFDF85 /* SkypeBabbleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkypeBabbleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B1E4481C04C55200EFDF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		72B1E44A1C04C55200EFDF85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +75,6 @@
 		72D411B51C130CAC0064BDE4 /* GMStateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMStateViewController.swift; sourceTree = "<group>"; };
 		72D411B71C130D520064BDE4 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		72D95AC71C075F13006FFCA6 /* AvatarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
-		72D95AC91C07677E006FFCA6 /* SkypeStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkypeStyleKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,11 +165,13 @@
 		72B1E4761C04C59700EFDF85 /* Bespoke Views */ = {
 			isa = PBXGroup;
 			children = (
-				72D95AC91C07677E006FFCA6 /* SkypeStyleKit.swift */,
+				1A4A09831C18605700418CFB /* GMBStyleKit.swift */,
 				72D411B11C12281B0064BDE4 /* GroupsViewController.swift */,
 				72D411B21C12281B0064BDE4 /* GroupsViewController.xib */,
 				72B1E4771C04C5B600EFDF85 /* ImageTile.swift */,
 				72D95AC71C075F13006FFCA6 /* AvatarButton.swift */,
+				1A4A09811C185DF400418CFB /* LeafAvatar.swift */,
+				1A4B23901C18710400FABD49 /* GroupsView.swift */,
 			);
 			name = "Bespoke Views";
 			sourceTree = "<group>";
@@ -340,15 +346,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D95AC81C075F13006FFCA6 /* AvatarButton.swift in Sources */,
-				72D95ACA1C07677E006FFCA6 /* SkypeStyleKit.swift in Sources */,
+				1A4A09821C185DF400418CFB /* LeafAvatar.swift in Sources */,
 				72B1E4781C04C5B600EFDF85 /* ImageTile.swift in Sources */,
 				72B1E44B1C04C55200EFDF85 /* ViewController.swift in Sources */,
 				72D411B31C12281B0064BDE4 /* GroupsViewController.swift in Sources */,
 				72D4119B1C0CC28D0064BDE4 /* AuthenticationViewController.swift in Sources */,
+				1A4B23911C18710400FABD49 /* GroupsView.swift in Sources */,
 				72B1E4491C04C55200EFDF85 /* AppDelegate.swift in Sources */,
 				72D411A71C0F39F10064BDE4 /* GroupMeAPI.swift in Sources */,
 				72D411B61C130CAC0064BDE4 /* GMStateViewController.swift in Sources */,
 				72D411B81C130D520064BDE4 /* ServiceManager.swift in Sources */,
+				1A4A09841C18605700418CFB /* GMBStyleKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

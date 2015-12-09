@@ -20,12 +20,10 @@ class GMStateViewController: UINavigationController {
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
-        setup();
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
-        setup();
     }
 
     
