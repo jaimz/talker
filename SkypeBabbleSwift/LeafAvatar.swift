@@ -34,7 +34,27 @@ class LeafAvatar: UIView {
     
     var avatarImage : UIImage = GMBStyleKit.imageOfFace {
         didSet {
-            _imageLayer.contents = avatarImage.CGImage;
+            _imageLayer.contents = avatarImage.CGImage
+        }
+    }
+    
+    var avatarUrl : String? = .None {
+        didSet {
+            if let urlString = avatarUrl {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+                    if let url = NSURL(string: urlString) {
+                        let imageData = NSData(contentsOfURL: url)
+                        
+                        if  let data = imageData {
+                            dispatch_async(dispatch_get_main_queue(), {
+                                if let image = UIImage(data: data) {
+                                    self.avatarImage = image
+                                }
+                            })
+                        }
+                    }
+                })
+            }
         }
     }
     

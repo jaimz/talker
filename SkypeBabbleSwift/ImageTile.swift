@@ -46,6 +46,7 @@ class ImageTile: UIView {
         }
     }
     
+    
     override func prepareForInterfaceBuilder() {
         image = GMBStyleKit.imageOfFace;
     }

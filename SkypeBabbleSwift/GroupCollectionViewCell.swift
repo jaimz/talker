@@ -13,6 +13,7 @@ class GroupCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var groupDescriptionLabel: UILabel!
     
+    @IBOutlet weak var avatarTile: ImageTile!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,10 +35,36 @@ class GroupCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var imageUrl : String? = .None {
+        didSet {
+            if let urlString = imageUrl {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+                    if let url = NSURL(string: urlString) {
+                        let imageData = NSData(contentsOfURL: url)
+                        
+                        if let data = imageData {
+                            dispatch_async(dispatch_get_main_queue(), {
+                                if let image = UIImage(data: data) {
+                                    self.avatarTile.image = image;
+                                }
+                            })
+                        }
+                    }
+                })
+            }
+        }
+    }
+
     @IBInspectable var cornerRadius : CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
             self.layer.masksToBounds = cornerRadius > 0
         }
+    }
+    
+    func bounce() {
+        let bounceAnim = AnimHelper.bounceAnimForKeyPath("transform.scale");
+
+        self.layer.addAnimation(bounceAnim, forKey: "bounceScale");
     }
 }

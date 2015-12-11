@@ -31,6 +31,7 @@
 		72D662241C18B15400399F15 /* GroupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72D662221C18B15400399F15 /* GroupCollectionViewCell.xib */; };
 		72D662261C18BBEB00399F15 /* DrawingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D662251C18BBEB00399F15 /* DrawingUtils.swift */; };
 		72D6622C1C18DDC600399F15 /* GroupCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D6622B1C18DDC600399F15 /* GroupCollectionFlowLayout.swift */; };
+		72D6622E1C1B2EAA00399F15 /* AnimHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D6622D1C1B2EAA00399F15 /* AnimHelper.swift */; };
 		72D95AC81C075F13006FFCA6 /* AvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D95AC71C075F13006FFCA6 /* AvatarButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		72D662221C18B15400399F15 /* GroupCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCollectionViewCell.xib; sourceTree = "<group>"; };
 		72D662251C18BBEB00399F15 /* DrawingUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingUtils.swift; sourceTree = "<group>"; };
 		72D6622B1C18DDC600399F15 /* GroupCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		72D6622D1C1B2EAA00399F15 /* AnimHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimHelper.swift; sourceTree = "<group>"; };
 		72D95AC71C075F13006FFCA6 /* AvatarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 				72D662211C18B15400399F15 /* GroupCollectionViewCell.swift */,
 				72D662221C18B15400399F15 /* GroupCollectionViewCell.xib */,
 				72D662251C18BBEB00399F15 /* DrawingUtils.swift */,
+				72D6622D1C1B2EAA00399F15 /* AnimHelper.swift */,
 			);
 			name = "Bespoke Views";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72D6622E1C1B2EAA00399F15 /* AnimHelper.swift in Sources */,
 				72D95AC81C075F13006FFCA6 /* AvatarButton.swift in Sources */,
 				1A4A09821C185DF400418CFB /* LeafAvatar.swift in Sources */,
 				72B1E4781C04C5B600EFDF85 /* ImageTile.swift in Sources */,

@@ -19,6 +19,9 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBOutlet var groupsCollectionView: UICollectionView!
     
+    @IBOutlet weak var userAvatar: LeafAvatar!
+    
+    
     // TODO(james): should be in a separate data source class
     private var groupsList : [JSON]? = .None;
     
@@ -50,7 +53,6 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         let nib = UINib(nibName: "GroupCollectionViewCell", bundle: .None);
         
-        
 
         self.groupsCollectionView.registerNib(nib, forCellWithReuseIdentifier: cellReuseId);
         
@@ -68,6 +70,12 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     // Got the user's profile information
     func gotMe(me: JSON?) {
+        if let me = me {
+            if let avatarUrl = me["image_url"].string {
+                self.userAvatar.avatarUrl = avatarUrl;
+            }
+        }
+        
         switch me {
         case .Some(let me):
             if let info = me.dictionary {
@@ -100,6 +108,16 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
         switch (groups) {
         case .Some(let groups):
             self.groupsList = groups.array;
+            
+            // TODO(james): Proper localisation & pluralisation...
+            let groupCount = groups.count
+            var groupSfx = "s"
+            if groups.count == 1 {
+                groupSfx = ""
+            }
+            
+            self.groupsLabel.text  = "You are a member of \(groupCount) group\(groupSfx)"
+            
             self.groupsCollectionView.reloadData();
             
             break;
@@ -116,6 +134,7 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
             groupMe.groups(gotGroups);
         }
     }
+
     
     // MARK: UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -142,9 +161,30 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
                 let groupDesc = groups[indexPath.row];
                 groupCell.groupName = groupDesc["name"].string;
                 groupCell.groupDescription = groupDesc["description"].string;
+                groupCell.imageUrl = groupDesc["image_url"].string;
             }
         }
         
         return cell;
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let cell = self.groupsCollectionView.cellForItemAtIndexPath(indexPath) as? GroupCollectionViewCell {
+            
+            if let groups = groupsList {
+                let groupDesc = groups[indexPath.row];
+                prepareGroupViewController(groupDesc);
+                
+                cell.bounce();
+                AnimHelper.DispatchAfterAnimDuration {
+                    
+                }
+            }
+        }
+    }
+
+    
+    func prepareGroupViewController(groupDesc: JSON) {
+        
     }
 }

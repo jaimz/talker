@@ -47,7 +47,7 @@ class AvatarButton: UIButton {
         self.layer.addSublayer(self.avatarImageLayer);
         self.layer.addSublayer(self.borderLayer);
         
-        self.addTarget(self, action: "bounceScale", forControlEvents: [ UIControlEvents.TouchDown, UIControlEvents.TouchDragEnter ]);
+        self.addTarget(self, action: "bounce", forControlEvents: [ UIControlEvents.TouchDown, UIControlEvents.TouchDragEnter ]);
     }
     
     var avatarImage : UIImage = GMBStyleKit.imageOfFace {
@@ -56,24 +56,12 @@ class AvatarButton: UIButton {
         }
     }
     
-    func bounceScale() {
-        let skypeBounce = CAKeyframeAnimation(keyPath: "transform.scale");
-        skypeBounce.duration = 0.5;
-        skypeBounce.calculationMode = kCAAnimationLinear;
-        skypeBounce.removedOnCompletion = true;
-        skypeBounce.repeatCount = 1;
-        skypeBounce.keyTimes = [ 0.0, 0.5636, 0.7818, 1.0 ];
-        skypeBounce.values = [ 1.0, 0.88, 1.06, 1.0 ];
-        
-        skypeBounce.timingFunctions = [ CAMediaTimingFunction(controlPoints: 0.33, 0.0, 0.0, 1.0),
-                                        CAMediaTimingFunction(controlPoints: 1.0, 0.0, 0.78, 1.0),
-                                        CAMediaTimingFunction(controlPoints: 0.33, 0.0, 0.67, 1.0),
-                                        CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        ];
-        
-        self.layer.addAnimation(skypeBounce, forKey: "scale");
-        
+    
+    func bounce() {
+        let anim = AnimHelper.bounceAnimForKeyPath("transform.scale");
+        self.layer.addAnimation(anim, forKey: "bounceAnim");
     }
+    
     
     override func layoutSublayersOfLayer(layer: CALayer) {
         let layerSize = layer.frame.size;

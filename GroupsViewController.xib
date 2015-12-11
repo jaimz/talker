@@ -12,6 +12,7 @@
                 <outlet property="createGroupButton" destination="TxG-A6-cSj" id="kpV-uE-zny"/>
                 <outlet property="groupsCollectionView" destination="hmn-FQ-Im1" id="Cbq-9f-n6x"/>
                 <outlet property="groupsLabel" destination="Xqn-XL-74w" id="cg9-xs-Fqx"/>
+                <outlet property="userAvatar" destination="3Lh-cj-eIs" id="WZQ-Z4-Vrs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

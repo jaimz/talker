@@ -14,14 +14,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="140" height="200"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPG-IC-7Rb">
-                        <rect key="frame" x="8" y="153" width="124" height="24"/>
+                        <rect key="frame" x="8" y="148" width="124" height="24"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Group description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-0i-KmT">
-                        <rect key="frame" x="8" y="177" width="124" height="21"/>
+                        <rect key="frame" x="8" y="172" width="124" height="21"/>
                         <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -45,6 +45,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="avatarTile" destination="Vc0-XX-Wei" id="LnL-AV-53K"/>
                 <outlet property="groupDescriptionLabel" destination="LBU-0i-KmT" id="q1C-WO-xLF"/>
                 <outlet property="groupNameLabel" destination="FPG-IC-7Rb" id="06V-cg-osL"/>
             </connections>
