@@ -9,7 +9,7 @@
 import UIKit
 
 class AnimHelper: NSObject {
-    private static let AnimationDuration = 0.3
+    static let AnimationDuration = 0.3
     
     static func bounceAnimForKeyPath(keyPath: String) -> CAAnimation {
         let bounceAnim = CAKeyframeAnimation(keyPath: keyPath);

@@ -8,9 +8,10 @@
 
 import UIKit
 
-class GMStateViewController: UINavigationController {
+class GMStateViewController: UINavigationController, UINavigationControllerDelegate {
 
     let authController = AuthenticationViewController();
+    let animController = AnimatedPresentationController();
     
     
     override init(rootViewController: UIViewController) {
@@ -28,7 +29,10 @@ class GMStateViewController: UINavigationController {
 
     
     func setup() {
+        self.delegate = self;
+
         self.navigationBarHidden = true
+        self.toolbarHidden = true;
         ServiceManager.sharedInstance.groupMe.notifications.addObserver(self, selector: "gotGroupMeNotification:", name: .None, object: .None);
     }
    
@@ -58,6 +62,13 @@ class GMStateViewController: UINavigationController {
         }
     }
    
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if (operation == UINavigationControllerOperation.Push) {
+            return animController;
+        }
+        
+        return .None;
+    }
     
     /*
     // MARK: - Navigation

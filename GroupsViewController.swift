@@ -25,6 +25,8 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
     // TODO(james): should be in a separate data source class
     private var groupsList : [JSON]? = .None;
     
+    private let conversationViewController = ConversationViewController(nibName: "ConversationViewController", bundle: .None);
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
         
@@ -176,8 +178,11 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
                 prepareGroupViewController(groupDesc);
                 
                 cell.bounce();
+                
                 AnimHelper.DispatchAfterAnimDuration {
-                    
+                    if let nc = self.navigationController {
+                        nc.pushViewController(self.conversationViewController, animated: true)
+                    }
                 }
             }
         }

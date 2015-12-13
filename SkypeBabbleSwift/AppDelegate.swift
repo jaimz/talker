@@ -15,13 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
-    private let stateNavigator = GMStateViewController(rootViewController: GroupsViewController(nibName: "GroupsViewController", bundle: .None));
-    
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let groupsVC = GroupsViewController(nibName: "GroupsViewController", bundle: .None);
+        let navController = GMStateViewController(rootViewController: groupsVC);
+        navController.toolbarHidden = true;
+        navController.navigationBarHidden = true;
         
+
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds);
-        self.window!.rootViewController = stateNavigator;
+        self.window!.rootViewController = navController;
+
         
         self.window?.makeKeyAndVisible()
         
