@@ -9,10 +9,11 @@
 import UIKit
 
 class ConversationViewController: UIViewController {
+    @IBOutlet var backButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        backButton.setImage(GMBStyleKit.imageOfBackArrow, forState: UIControlState.Normal);
         // Do any additional setup after loading the view.
     }
 
@@ -21,8 +22,13 @@ class ConversationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-   
+    override func prepareForInterfaceBuilder() {
+        backButton.setImage(GMBStyleKit.imageOfBackArrow, forState: UIControlState.Normal);
+    }
     
+    @IBAction func goBack() {
+        self.navigationController?.popViewControllerAnimated(true);
+    }
 
     /*
     // MARK: - Navigation

@@ -11,6 +11,9 @@ import UIKit
 @IBDesignable
 class GroupsView: UIView {
 
+    private let userAvatarView = LeafAvatar();
+    
+    
 
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

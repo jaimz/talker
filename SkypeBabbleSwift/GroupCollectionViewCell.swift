@@ -21,6 +21,8 @@ class GroupCollectionViewCell: UICollectionViewCell {
         groupNameLabel.textColor = GMBStyleKit.purple;
         
         groupDescriptionLabel.textColor = GMBStyleKit.purple;
+        
+        self.contentView.backgroundColor = UIColor.clearColor();
     }
 
     var groupName : String? {
@@ -66,5 +68,12 @@ class GroupCollectionViewCell: UICollectionViewCell {
         let bounceAnim = AnimHelper.bounceAnimForKeyPath("transform.scale");
 
         self.layer.addAnimation(bounceAnim, forKey: "bounceScale");
+    }
+    
+    // TODO(james) not sure of the ramification of overriding this w.r.t the content view/ selection view etc.
+    override func drawRect(rect: CGRect) {
+        let ctx = UIGraphicsGetCurrentContext();
+        CGContextClipToRect(ctx, rect);
+        GMBStyleKit.drawSlate();
     }
 }

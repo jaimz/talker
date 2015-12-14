@@ -63,11 +63,12 @@ class GMStateViewController: UINavigationController, UINavigationControllerDeleg
     }
    
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        if (operation == UINavigationControllerOperation.Push) {
-            return animController;
-        }
-        
-        return .None;
+        return animController;
+//        if (operation == UINavigationControllerOperation.Push) {
+//            return animController;
+//        }
+//        
+//        return .None;
     }
     
     /*
