@@ -97,13 +97,6 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
         }
     }
 
-   
-
-    private func printGroup(groupInfo: [String:JSON]) {
-        if let groupName = groupInfo["name"]?.string {
-            NSLog("Group: %@", groupName);
-        }
-    }
     
     // Got the list of the user's groups
     private func gotGroups(groups: JSON?) {
@@ -175,7 +168,7 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
             
             if let groups = groupsList {
                 let groupDesc = groups[indexPath.row];
-                prepareGroupViewController(groupDesc);
+                self.conversationViewController.Description = groupDesc;
                 
                 cell.bounce();
                 
@@ -186,10 +179,5 @@ class GroupsViewController: UIViewController, UICollectionViewDelegate, UICollec
                 }
             }
         }
-    }
-
-    
-    func prepareGroupViewController(groupDesc: JSON) {
-        
     }
 }

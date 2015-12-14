@@ -57,18 +57,20 @@ class GMStateViewController: UINavigationController, UINavigationControllerDeleg
         case groupMe.needAuthenticationNotification:
             self.pushViewController(authController, animated: true)
             break;
+        case groupMe.haveAccessNotification:
+            if self.visibleViewController == authController {
+                self.popViewControllerAnimated(true);
+            }
+            break;
         default:
             break
         }
     }
    
+    
     func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
         return animController;
-//        if (operation == UINavigationControllerOperation.Push) {
-//            return animController;
-//        }
-//        
-//        return .None;
     }
     
     /*

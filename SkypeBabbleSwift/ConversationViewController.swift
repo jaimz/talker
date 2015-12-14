@@ -7,14 +7,31 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ConversationViewController: UIViewController {
+    
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var groupNameLabel: UILabel!
+    @IBOutlet var participantCountLabel: UILabel!
+    @IBOutlet var groupAvatar: LeafAvatar!
 
+    
+    private var _groupId : String? = .None;
+    private var _groupName : String? = .None;
+    private var _participantCount : Int? = .None;
+    private var _groupAvatar : String? = .None;
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.setImage(GMBStyleKit.imageOfBackArrow, forState: UIControlState.Normal);
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        groupNameLabel.text = _groupName ?? "";
+        participantCountLabel.text = generateParticipantCountLabel();
+        groupAvatar.avatarUrl = _groupAvatar;
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +46,38 @@ class ConversationViewController: UIViewController {
     @IBAction func goBack() {
         self.navigationController?.popViewControllerAnimated(true);
     }
-
+    
+    private func generateParticipantCountLabel() -> String {
+        switch _participantCount {
+        case .None:
+            return "No group information";
+        case .Some(let c):
+            let sfx = c == 1 ? "" : "s"
+            return "\(c) participant\(sfx)..."
+        }
+    }
+    
+    
+    var Description : JSON? = .None {
+        didSet {
+            // TODO(james): Clean up previous group?
+            switch Description
+            {
+            case .Some(let d):
+                _groupName = d["name"].string;
+                _participantCount = d["members"].count;
+                _groupAvatar = d["image_url"].string;
+                
+                break;
+            case .None:
+                _groupName = .None;
+                _participantCount = .None;
+                _groupAvatar = .None;
+            }
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 
