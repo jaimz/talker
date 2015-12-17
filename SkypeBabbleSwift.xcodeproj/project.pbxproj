@@ -12,6 +12,7 @@
 		1A4B23911C18710400FABD49 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B23901C18710400FABD49 /* GroupsView.swift */; };
 		1A68D7771C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A68D7751C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift */; };
 		1A68D7781C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68D7761C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib */; };
+		723424451C230B3900B0B804 /* MessageArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723424441C230B3900B0B804 /* MessageArrowView.swift */; };
 		72AD90C21C1DA39D0065FD3C /* AnimatedPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD90C11C1DA39D0065FD3C /* AnimatedPresentationController.swift */; };
 		72AD90C41C1DB73D0065FD3C /* TestNavControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD90C31C1DB73D0065FD3C /* TestNavControllerDelegate.swift */; };
 		72B1E4491C04C55200EFDF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E4481C04C55200EFDF85 /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		1A4B23901C18710400FABD49 /* GroupsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		1A68D7751C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageColllectionViewCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A68D7761C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageColllectionViewCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		723424441C230B3900B0B804 /* MessageArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageArrowView.swift; sourceTree = "<group>"; };
 		72AD90C11C1DA39D0065FD3C /* AnimatedPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPresentationController.swift; sourceTree = "<group>"; };
 		72AD90C31C1DB73D0065FD3C /* TestNavControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNavControllerDelegate.swift; sourceTree = "<group>"; };
 		72B1E4451C04C55200EFDF85 /* SkypeBabbleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkypeBabbleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,7 @@
 				72D6622D1C1B2EAA00399F15 /* AnimHelper.swift */,
 				1A68D7751C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift */,
 				1A68D7761C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib */,
+				723424441C230B3900B0B804 /* MessageArrowView.swift */,
 			);
 			name = "Bespoke Views";
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723424451C230B3900B0B804 /* MessageArrowView.swift in Sources */,
 				72D6622E1C1B2EAA00399F15 /* AnimHelper.swift in Sources */,
 				72D95AC81C075F13006FFCA6 /* AvatarButton.swift in Sources */,
 				1A4A09821C185DF400418CFB /* LeafAvatar.swift in Sources */,
