@@ -64,17 +64,7 @@ class LeafAvatar: UIView {
     
     
     func setup() {
-        _leafPath.moveToPoint(CGPointMake(50, 25))
-        _leafPath.addCurveToPoint(CGPointMake(25, -0), controlPoint1: CGPointMake(50, 11.2), controlPoint2: CGPointMake(38.8, -0))
-        _leafPath.addLineToPoint(CGPointMake(2, -0))
-        _leafPath.addCurveToPoint(CGPointMake(-0, 2), controlPoint1: CGPointMake(0.9, -0), controlPoint2: CGPointMake(-0, 0.9))
-        _leafPath.addLineToPoint(CGPointMake(-0, 25))
-        _leafPath.addCurveToPoint(CGPointMake(25, 50), controlPoint1: CGPointMake(-0, 38.8), controlPoint2: CGPointMake(11.2, 50))
-        _leafPath.addLineToPoint(CGPointMake(48, 50))
-        _leafPath.addCurveToPoint(CGPointMake(50, 48), controlPoint1: CGPointMake(49.1, 50), controlPoint2: CGPointMake(50, 49.1))
-        _leafPath.addLineToPoint(CGPointMake(50, 25))
-        _leafPath.closePath()
-        _leafPath.miterLimit = 4;
+        calculateLeafPath(self.frame);
         
         let mask = CAShapeLayer();
         mask.path = _leafPath.CGPath;
@@ -104,9 +94,30 @@ class LeafAvatar: UIView {
         self.layer.shadowPath = _leafPath.CGPath;
     }
     
+    private func calculateLeafPath(frame: CGRect) {
+        _leafPath.removeAllPoints()
+        
+        let w = frame.width;
+        let mid = w / 2;
+        
+        _leafPath.moveToPoint(CGPointMake(w, mid))
+        _leafPath.addCurveToPoint(CGPointMake(mid, 0), controlPoint1: CGPoint(x: w, y: (w / 4.4642)), controlPoint2: CGPoint(x: w / 1.2886, y: 0))
+        _leafPath.addLineToPoint(CGPoint(x: 2, y: 0))
+        _leafPath.addCurveToPoint(CGPoint(x: 0, y: 2), controlPoint1: CGPoint(x: 1, y: 0), controlPoint2: CGPoint(x: 0, y: 1))
+        _leafPath.addLineToPoint(CGPoint(x: 0, y: mid))
+        _leafPath.addCurveToPoint(CGPoint(x: mid, y: w), controlPoint1: CGPoint(x: 0, y: w / 1.2886), controlPoint2: CGPoint(x: w / 4.4642, y: w))
+        _leafPath.addLineToPoint(CGPoint(x: w - 2, y: w))
+        _leafPath.addCurveToPoint(CGPoint(x: w, y:  (w - 2)), controlPoint1: CGPoint(x: w, y: w), controlPoint2: CGPoint(x: w, y: w))
+        _leafPath.addLineToPoint(CGPoint(x: w, y: mid))
+        _leafPath.closePath()
+        _leafPath.miterLimit = 4
+    }
+    
     override func layoutSublayersOfLayer(layer: CALayer) {
         let frame = CGRect(origin: CGPoint(x: 0, y: 0),
             size: layer.frame.size);
+        
+        calculateLeafPath(frame);
         
         _imageLayer.frame = frame;
         _borderLayer.frame = frame;

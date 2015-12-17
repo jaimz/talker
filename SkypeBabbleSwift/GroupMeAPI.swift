@@ -29,6 +29,9 @@ class GroupMeAPI: NSObject {
     
     // Base url of the API server
     private let baseUrl = "https://api.groupme.com/v3";
+    
+    // Base url for testing
+//    private let baseUrl = "http://localhost:8080/fakegm";
    
     
     // Public notification center

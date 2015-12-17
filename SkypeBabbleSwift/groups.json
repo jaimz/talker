@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "code": 201
+  },
+  "response": {
+    "id": "18530903",
+    "group_id": "18530903",
+    "name": "Family",
+    "phone_number": "+1 6093650951",
+    "type": "private",
+    "description": null,
+    "image_url": null,
+    "creator_user_id": "31945718",
+    "created_at": 1450258298,
+    "updated_at": 1450258298,
+    "office_mode": false,
+    "share_url": null,
+    "members": [
+      {
+        "id": "126036552",
+        "user_id": "31945718",
+        "nickname": "James OBrien",
+        "muted": false,
+        "image_url": "http://i.groupme.com/200x200.jpeg.c82660d803f644d5a1cc6b8d5c6fe702",
+        "autokicked": false
+      }
+    ],
+    "max_memberships": 200,
+    "max_members": 200,
+    "messages": {
+      "count": 0,
+      "last_message_id": null,
+      "last_message_created_at": null,
+      "preview": {
+        "nickname": null,
+        "text": null,
+        "image_url": null,
+        "attachments": []
+      }
+    }
+  }
+}
