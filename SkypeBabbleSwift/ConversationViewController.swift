@@ -30,6 +30,8 @@ class ConversationViewController: UIViewController {
         super.viewDidLoad()
         backButton.setImage(GMBStyleKit.imageOfBackArrow, forState: UIControlState.Normal);
         _messagesCollection.collectionView = messageCollectionView
+        messageCollectionView.backgroundView?.removeFromSuperview()
+        messageCollectionView.backgroundView = MessagesBackgroundView()
     }
     
     override func viewWillAppear(animated: Bool) {
