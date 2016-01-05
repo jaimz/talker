@@ -15,6 +15,7 @@ class ConversationViewController: UIViewController {
     @IBOutlet var groupNameLabel: UILabel!
     @IBOutlet var participantCountLabel: UILabel!
     @IBOutlet var groupAvatar: LeafAvatar!
+    @IBOutlet var messageCollectionView: UICollectionView!
 
     
     private var _groupId : String? = .None;
@@ -22,16 +23,26 @@ class ConversationViewController: UIViewController {
     private var _participantCount : Int? = .None;
     private var _groupAvatar : String? = .None;
     
+    private let _messagesCollection : MessageCollection = MessageCollection()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.setImage(GMBStyleKit.imageOfBackArrow, forState: UIControlState.Normal);
+        _messagesCollection.collectionView = messageCollectionView
     }
     
     override func viewWillAppear(animated: Bool) {
         groupNameLabel.text = _groupName ?? "";
         participantCountLabel.text = generateParticipantCountLabel();
         groupAvatar.avatarUrl = _groupAvatar;
+        
+        _messagesCollection.messages = .None;
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        _messagesCollection.conversationID = _groupId;
+        _messagesCollection.loadInitialMessages();
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,9 +54,11 @@ class ConversationViewController: UIViewController {
         backButton.setImage(GMBStyleKit.imageOfBackArrow, forState: UIControlState.Normal);
     }
     
+    
     @IBAction func goBack() {
         self.navigationController?.popViewControllerAnimated(true);
     }
+    
     
     private func generateParticipantCountLabel() -> String {
         switch _participantCount {
@@ -67,12 +80,14 @@ class ConversationViewController: UIViewController {
                 _groupName = d["name"].string;
                 _participantCount = d["members"].count;
                 _groupAvatar = d["image_url"].string;
+                _groupId = d["group_id"].string
                 
                 break;
             case .None:
                 _groupName = .None;
                 _participantCount = .None;
                 _groupAvatar = .None;
+                _groupId = .None;
             }
         }
     }

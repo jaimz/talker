@@ -187,5 +187,8 @@ class GroupMeAPI: NSObject {
         req(.GET, path: "groups", parameters:  .None, completion: completion);
     }
     
+    func messages(groupId: String, completion: GroupMeCallback) {
+        req(.GET, path: "groups/\(groupId)/messages", parameters: .None, completion: completion)
+    }
     
 }
