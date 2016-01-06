@@ -63,7 +63,26 @@ class MessageColllectionViewCellCollectionViewCell: UICollectionViewCell {
         let messageSize = self.messageLabel.sizeThatFits(infHeight);
         
         nameLabel.frame = CGRect(origin: CGPoint(x: avatarMargin, y: 12), size: nameSize)
+        
+        NSLog("Message size h: %f (%f)", messageSize.height, contentWidth)
         messageLabel.frame = CGRect(origin: CGPoint(x: avatarMargin, y: 12 + nameSize.height), size: messageSize)
+    }
+    
+    override func sizeThatFits(size: CGSize) -> CGSize {
+        var result = CGSize(width: size.width, height: CGFloat.max)
+        
+        var height = avatarSize
+        //let avatarMargin = avatarSize + avatarInset + labelPad
+        //let contentWidth = bounds.width - (avatarMargin * 2)
+        let nameSize = self.nameLabel.sizeThatFits(result)
+        let messageSize = self.messageLabel.sizeThatFits(result)
+        
+        height += (12 + nameSize.height)
+        height += messageSize.height
+        
+        result.height = height
+        
+        return result
     }
     
     func loadViewFromNib() -> UIView {

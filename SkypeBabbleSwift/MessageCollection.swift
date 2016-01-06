@@ -59,6 +59,9 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
                 if idx % 2 == 1 {
                     c.arrowOrientation = MessageArrowOrientation.Right
                 }
+                
+                c.setNeedsLayout()
+                c.layoutIfNeeded()
             }
         }
         
@@ -70,16 +73,19 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         
         let width = collectionView.bounds.width - (flowLayout.sectionInset.left + flowLayout.sectionInset.right)
-        var result = CGSize(width: width, height: 0.0)
+//        var result = CGSize(width: width, height: 0.0)
 
         if let message = messages?[messageIdx].dictionary {
             MessageCollection._sizingView.configureWithMessage(message)
-            MessageCollection._sizingView.setNeedsLayout()
-            MessageCollection._sizingView.layoutIfNeeded()
-            result.height = MessageCollection._sizingView.bounds.height
+            let result = MessageCollection._sizingView.sizeThatFits(CGSize(width: width, height: CGFloat.max))
+            NSLog("Cell size: %f, %f", result.width, result.height)
+            return result
+//            MessageCollection._sizingView.setNeedsLayout()
+//            MessageCollection._sizingView.layoutIfNeeded()
+//            result.height = MessageCollection._sizingView.bounds.height
         }
 
-        return result
+        return CGSize(width: width, height: 0)
     }
     
     func gotInitialMessages(messages: JSON?) {
