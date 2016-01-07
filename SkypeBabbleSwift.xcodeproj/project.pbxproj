@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A0525A71C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0525A61C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift */; };
+		1A0525A91C3E6061004C1B37 /* SermonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0525A81C3E6061004C1B37 /* SermonViewCell.swift */; };
 		1A4A09821C185DF400418CFB /* LeafAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A09811C185DF400418CFB /* LeafAvatar.swift */; };
 		1A4A09841C18605700418CFB /* GMBStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A09831C18605700418CFB /* GMBStyleKit.swift */; };
 		1A4B23911C18710400FABD49 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B23901C18710400FABD49 /* GroupsView.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		1A0525A61C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		1A0525A81C3E6061004C1B37 /* SermonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SermonViewCell.swift; sourceTree = "<group>"; };
 		1A4A09811C185DF400418CFB /* LeafAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeafAvatar.swift; sourceTree = "<group>"; };
 		1A4A09831C18605700418CFB /* GMBStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMBStyleKit.swift; sourceTree = "<group>"; };
 		1A4B23901C18710400FABD49 /* GroupsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				723424441C230B3900B0B804 /* MessageArrowView.swift */,
 				1A0525A61C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift */,
 				7208A58D1C3C385E004B92EE /* MessagesBackgroundView.swift */,
+				1A0525A81C3E6061004C1B37 /* SermonViewCell.swift */,
 			);
 			name = "Bespoke Views";
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0525A91C3E6061004C1B37 /* SermonViewCell.swift in Sources */,
 				723424451C230B3900B0B804 /* MessageArrowView.swift in Sources */,
 				1A0525A71C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift in Sources */,
 				72D6622E1C1B2EAA00399F15 /* AnimHelper.swift in Sources */,

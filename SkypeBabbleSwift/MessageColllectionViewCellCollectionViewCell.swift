@@ -9,10 +9,10 @@
 import UIKit
 import SwiftyJSON
 
-enum MessageArrowOrientation {
-    case Left
-    case Right
-}
+//enum MessageArrowOrientation {
+//    case Left
+//    case Right
+//}
 
 class MessageColllectionViewCellCollectionViewCell: UICollectionViewCell {
     
