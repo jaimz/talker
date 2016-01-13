@@ -171,7 +171,7 @@ class GroupMeAPI: NSObject {
             break;
         };
         
-        
+        print(urlString)
         Alamofire.request(method, urlString, parameters: realParams).validate().responseString(completionHandler: callback);
     }
     

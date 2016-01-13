@@ -10,4 +10,20 @@ import UIKit
 
 class MessageCollectionFlowLayout: UICollectionViewFlowLayout {
 
+    override init() {
+        super.init()
+        setupMetrics()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupMetrics()
+    }
+    
+    
+    private func setupMetrics() {
+        self.minimumLineSpacing = 0
+        self.minimumInteritemSpacing = 0
+    }
+
 }

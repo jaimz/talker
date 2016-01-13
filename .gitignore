@@ -1,1 +1,4 @@
 Carthage/*
+*.xcbkptlist
+
+Cartfile.resolved

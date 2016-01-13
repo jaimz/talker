@@ -12,7 +12,7 @@ import SwiftyJSON
 class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private static let cellReuseId = "messageCollectionCell"
     
-    private static let _sizingView = MessageColllectionViewCellCollectionViewCell.loadFromNib()
+    private static let _sizingView = SermonViewCell()  //MessageColllectionViewCellCollectionViewCell.loadFromNib()
     
     var conversationID : String? = .None
     
@@ -30,7 +30,7 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
     
     weak var collectionView : UICollectionView? = .None {
         didSet {
-            collectionView?.registerNib(UINib(nibName: "MessageColllectionViewCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: MessageCollection.cellReuseId)
+            collectionView?.registerClass(SermonViewCell.self, forCellWithReuseIdentifier: MessageCollection.cellReuseId)
             collectionView?.dataSource = self
             collectionView?.delegate = self
         }
@@ -51,13 +51,17 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MessageCollection.cellReuseId, forIndexPath: indexPath)
-        
-        let idx = indexPath.item;
-        if let message = messages?[idx].dictionary {
-            if let c = cell as? MessageColllectionViewCellCollectionViewCell {
-                c.configureWithMessage(message);
+
+        if let msgs = messages {
+            let idx = (msgs.count - 1) - indexPath.item
+            let message = msgs[idx].dictionary
+            
+            if let c = cell as? SermonViewCell {
+                c.message = message;
                 if idx % 2 == 1 {
                     c.arrowOrientation = MessageArrowOrientation.Right
+                } else {
+                    c.arrowOrientation = MessageArrowOrientation.Left
                 }
                 
                 c.setNeedsLayout()
@@ -69,20 +73,16 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let messageIdx = indexPath.item;
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         
         let width = collectionView.bounds.width - (flowLayout.sectionInset.left + flowLayout.sectionInset.right)
-//        var result = CGSize(width: width, height: 0.0)
 
-        if let message = messages?[messageIdx].dictionary {
-            MessageCollection._sizingView.configureWithMessage(message)
-            let result = MessageCollection._sizingView.sizeThatFits(CGSize(width: width, height: CGFloat.max))
-            NSLog("Cell size: %f, %f", result.width, result.height)
-            return result
-//            MessageCollection._sizingView.setNeedsLayout()
-//            MessageCollection._sizingView.layoutIfNeeded()
-//            result.height = MessageCollection._sizingView.bounds.height
+
+        if let msgs = messages {
+            let idx = (msgs.count - 1) - indexPath.item
+            
+            MessageCollection._sizingView.message = msgs[idx].dictionary
+            return MessageCollection._sizingView.sizeThatFits(CGSize(width: width, height: CGFloat.max))
         }
 
         return CGSize(width: width, height: 0)

@@ -12,8 +12,6 @@
 		1A4A09821C185DF400418CFB /* LeafAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A09811C185DF400418CFB /* LeafAvatar.swift */; };
 		1A4A09841C18605700418CFB /* GMBStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A09831C18605700418CFB /* GMBStyleKit.swift */; };
 		1A4B23911C18710400FABD49 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B23901C18710400FABD49 /* GroupsView.swift */; };
-		1A68D7771C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A68D7751C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift */; };
-		1A68D7781C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A68D7761C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib */; };
 		1A68D77A1C24086800493B11 /* MessageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A68D7791C24086800493B11 /* MessageCollection.swift */; };
 		7208A58E1C3C385E004B92EE /* MessagesBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208A58D1C3C385E004B92EE /* MessagesBackgroundView.swift */; };
 		723424451C230B3900B0B804 /* MessageArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723424441C230B3900B0B804 /* MessageArrowView.swift */; };
@@ -69,8 +67,6 @@
 		1A4A09811C185DF400418CFB /* LeafAvatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeafAvatar.swift; sourceTree = "<group>"; };
 		1A4A09831C18605700418CFB /* GMBStyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMBStyleKit.swift; sourceTree = "<group>"; };
 		1A4B23901C18710400FABD49 /* GroupsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
-		1A68D7751C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageColllectionViewCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		1A68D7761C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageColllectionViewCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		1A68D7791C24086800493B11 /* MessageCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCollection.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		7208A58D1C3C385E004B92EE /* MessagesBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesBackgroundView.swift; sourceTree = "<group>"; };
 		723424441C230B3900B0B804 /* MessageArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageArrowView.swift; sourceTree = "<group>"; };
@@ -207,8 +203,6 @@
 				72D662221C18B15400399F15 /* GroupCollectionViewCell.xib */,
 				72D662251C18BBEB00399F15 /* DrawingUtils.swift */,
 				72D6622D1C1B2EAA00399F15 /* AnimHelper.swift */,
-				1A68D7751C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift */,
-				1A68D7761C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib */,
 				723424441C230B3900B0B804 /* MessageArrowView.swift */,
 				1A0525A61C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift */,
 				7208A58D1C3C385E004B92EE /* MessagesBackgroundView.swift */,
@@ -352,7 +346,6 @@
 				72B1E4531C04C55200EFDF85 /* LaunchScreen.storyboard in Resources */,
 				72D662321C1B7C7300399F15 /* ConversationViewController.xib in Resources */,
 				72B1E4501C04C55200EFDF85 /* Assets.xcassets in Resources */,
-				1A68D7781C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.xib in Resources */,
 				72B1E44E1C04C55200EFDF85 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,7 +409,6 @@
 				72D411B61C130CAC0064BDE4 /* GMStateViewController.swift in Sources */,
 				72AD90C41C1DB73D0065FD3C /* TestNavControllerDelegate.swift in Sources */,
 				72D411B81C130D520064BDE4 /* ServiceManager.swift in Sources */,
-				1A68D7771C21776F00493B11 /* MessageColllectionViewCellCollectionViewCell.swift in Sources */,
 				72D662231C18B15400399F15 /* GroupCollectionViewCell.swift in Sources */,
 				1A68D77A1C24086800493B11 /* MessageCollection.swift in Sources */,
 				72AD90C21C1DA39D0065FD3C /* AnimatedPresentationController.swift in Sources */,

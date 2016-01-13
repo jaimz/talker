@@ -20,7 +20,7 @@ class GroupCollectionFlowLayout: UICollectionViewFlowLayout {
     }
     
     private func setup() {
-        self.minimumLineSpacing = 0.0;
+        self.minimumLineSpacing = 8.0;
         self.minimumInteritemSpacing = 0.0;
         self.itemSize = CGSize(width: 140.0, height: 200.0);
         self.scrollDirection = UICollectionViewScrollDirection.Vertical;
