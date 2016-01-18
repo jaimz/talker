@@ -102,7 +102,7 @@ class SermonViewCell: UICollectionViewCell {
         
         let avatarX = arrowOrientation == MessageArrowOrientation.Right ? SermonViewCell.avatarInset : bounds.width - (SermonViewCell.avatarInset + SermonViewCell.avatarSize);
         
-        self.avatar.frame = CGRect(origin: CGPoint(x: avatarX, y: 0), size: CGSize(width: SermonViewCell.avatarSize, height: SermonViewCell.avatarSize))
+        self.avatar.frame = CGRect(origin: CGPoint(x: avatarX, y: 5), size: CGSize(width: SermonViewCell.avatarSize, height: SermonViewCell.avatarSize))
         
         let avatarMargin = SermonViewCell.avatarSize + SermonViewCell.avatarInset + SermonViewCell.labelPad
         let contentWidth = bounds.width - (avatarMargin * 2)

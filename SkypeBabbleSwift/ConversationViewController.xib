@@ -50,11 +50,22 @@
                         <action selector="goBack" destination="-1" eventType="touchUpInside" id="4S1-bP-uQ8"/>
                     </connections>
                 </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-2b-htq">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-2b-htq" customClass="MessageEditorBacking" customModule="SkypeBabbleSwift" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="564" width="600" height="36"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Say something..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UwE-zk-ace">
+                            <rect key="frame" x="8" y="3" width="533" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="UwE-zk-ace" firstAttribute="leading" secondItem="ixL-2b-htq" secondAttribute="leading" constant="8" id="AQC-kq-bLu"/>
                         <constraint firstAttribute="height" constant="36" id="GKT-GF-i41"/>
+                        <constraint firstItem="UwE-zk-ace" firstAttribute="top" secondItem="ixL-2b-htq" secondAttribute="top" constant="3" id="QG8-s6-X1f"/>
+                        <constraint firstAttribute="bottom" secondItem="UwE-zk-ace" secondAttribute="bottom" constant="3" id="bgh-CE-aH8"/>
+                        <constraint firstAttribute="trailing" secondItem="UwE-zk-ace" secondAttribute="trailing" constant="59" id="zMS-Zk-YFC"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Wkj-dI-mNu">

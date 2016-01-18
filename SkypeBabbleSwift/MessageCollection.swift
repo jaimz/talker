@@ -21,12 +21,7 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
         super.init()
         self.messages = messages;
     }
-    
-    var messages : [JSON]? = .None {
-        didSet {
-            collectionView?.reloadData();
-        }
-    }
+
     
     weak var collectionView : UICollectionView? = .None {
         didSet {
@@ -35,6 +30,21 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
             collectionView?.delegate = self
         }
     }
+
+    
+    var messages : [JSON]? = .None {
+        didSet {
+            if let m = messages {
+                collectionView?.reloadData();
+                if (m.count > 0) {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.collectionView?.scrollToItemAtIndexPath(NSIndexPath(forItem: (m.count - 1), inSection: 0), atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: false)
+                    })
+                }
+            }
+        }
+    }
+    
     
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -48,6 +58,7 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
         
         return 0;
     }
+    
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MessageCollection.cellReuseId, forIndexPath: indexPath)
@@ -72,6 +83,7 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
         return cell;
     }
     
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         
@@ -88,10 +100,20 @@ class MessageCollection: NSObject, UICollectionViewDataSource, UICollectionViewD
         return CGSize(width: width, height: 0)
     }
     
+    
     func gotInitialMessages(messages: JSON?) {
         if let cv = self.collectionView {
             self.messages = messages?["messages"].array;
-            cv.reloadData()
+            
+            if let m = self.messages {
+                cv.reloadData()
+            
+                if (m.count > 0) {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.collectionView?.scrollToItemAtIndexPath(NSIndexPath(forItem: (m.count - 1), inSection: 0), atScrollPosition: UICollectionViewScrollPosition.Bottom, animated: false)
+                    })
+                }
+            }
         }
     }
     

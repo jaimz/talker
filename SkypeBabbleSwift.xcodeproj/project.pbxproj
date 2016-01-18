@@ -15,6 +15,7 @@
 		1A68D77A1C24086800493B11 /* MessageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A68D7791C24086800493B11 /* MessageCollection.swift */; };
 		7208A58E1C3C385E004B92EE /* MessagesBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7208A58D1C3C385E004B92EE /* MessagesBackgroundView.swift */; };
 		723424451C230B3900B0B804 /* MessageArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723424441C230B3900B0B804 /* MessageArrowView.swift */; };
+		725F22561C47FB8100AB8FDA /* MessageEditorBacking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F22551C47FB8100AB8FDA /* MessageEditorBacking.swift */; };
 		72AD90C21C1DA39D0065FD3C /* AnimatedPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD90C11C1DA39D0065FD3C /* AnimatedPresentationController.swift */; };
 		72AD90C41C1DB73D0065FD3C /* TestNavControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AD90C31C1DB73D0065FD3C /* TestNavControllerDelegate.swift */; };
 		72B1E4491C04C55200EFDF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B1E4481C04C55200EFDF85 /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 		1A68D7791C24086800493B11 /* MessageCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCollection.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		7208A58D1C3C385E004B92EE /* MessagesBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesBackgroundView.swift; sourceTree = "<group>"; };
 		723424441C230B3900B0B804 /* MessageArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageArrowView.swift; sourceTree = "<group>"; };
+		725F22551C47FB8100AB8FDA /* MessageEditorBacking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageEditorBacking.swift; sourceTree = "<group>"; };
 		72AD90C11C1DA39D0065FD3C /* AnimatedPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedPresentationController.swift; sourceTree = "<group>"; };
 		72AD90C31C1DB73D0065FD3C /* TestNavControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestNavControllerDelegate.swift; sourceTree = "<group>"; };
 		72B1E4451C04C55200EFDF85 /* SkypeBabbleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkypeBabbleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 				1A0525A61C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift */,
 				7208A58D1C3C385E004B92EE /* MessagesBackgroundView.swift */,
 				1A0525A81C3E6061004C1B37 /* SermonViewCell.swift */,
+				725F22551C47FB8100AB8FDA /* MessageEditorBacking.swift */,
 			);
 			name = "Bespoke Views";
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725F22561C47FB8100AB8FDA /* MessageEditorBacking.swift in Sources */,
 				1A0525A91C3E6061004C1B37 /* SermonViewCell.swift in Sources */,
 				723424451C230B3900B0B804 /* MessageArrowView.swift in Sources */,
 				1A0525A71C3AA5AA004C1B37 /* MessageCollectionFlowLayout.swift in Sources */,
